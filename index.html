@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>DZAIR GAMES | شحن الألعاب</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #171717;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 22px 18px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #22c55e;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 35px 20px 25px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .game {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .game:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon {
+      font-size: 55px;
+      margin-bottom: 12px;
+    }
+
+    .game h2 {
+      margin-bottom: 8px;
+      font-size: 22px;
+    }
+
+    .game p {
+      color: #777;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: #16a34a;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .info {
+      background: white;
+      margin: 10px 20px 30px;
+      padding: 20px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .info h3 {
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #111827;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    @media (min-width: 600px) {
+      .games {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">DZAIR <span>GAMES</span></div>
+    <p>منصتك لشحن الألعاب بسرعة وسهولة 🎮</p>
+  </header>
+
+  <section class="hero">
+    <h1>اختر لعبتك</h1>
+    <p>اختر اللعبة التي تريد شحنها وابدأ الآن</p>
+  </section>
+
+  <section class="games">
+
+    <div class="game">
+      <div class="icon">🔥</div>
+      <h2>Free Fire</h2>
+      <p>شحن جواهر Free Fire</p>
+      <button onclick="chooseGame('Free Fire')">
+        شحن الآن
+      </button>
+    </div>
+
+    <div class="game">
+      <div class="icon">🎯</div>
+      <h2>PUBG Mobile</h2>
+      <p>شحن UC PUBG Mobile</p>
+      <button onclick="chooseGame('PUBG Mobile')">
+        شحن الآن
+      </button>
+    </div>
+
+    <div class="game">
+      <div class="icon">⚽</div>
+      <h2>FC Mobile</h2>
+      <p>شحن FC Mobile</p>
+      <button onclick="chooseGame('FC Mobile')">
+        شحن الآن
+      </button>
+    </div>
+
+  </section>
+
+  <div class="info">
+    <h3>💳 دفع آمن وسريع</h3>
+    <p>
+      اختر اللعبة والباقة المناسبة لك.
+      سيتم تطوير نظام الدفع والشحن الآلي في الخطوات القادمة.
+    </p>
+  </div>
+
+  <footer>
+    © 2026 DZAIR GAMES - جميع الحقوق محفوظة
+  </footer>
+
+  <script>
+    function chooseGame(game) {
+      alert("لقد اخترت: " + game + "\nسيتم تجهيز صفحة الشحن قريبًا.");
+    }
+  </script>
+
+</body>
+</html>
