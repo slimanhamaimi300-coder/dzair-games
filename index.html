@@ -15,134 +15,124 @@
     }
 
     body {
-      background: #f5f7fb;
-      color: #171717;
+      background: #0f172a;
+      color: white;
     }
 
     header {
-      background: #111827;
-      color: white;
-      padding: 22px 18px;
+      background: linear-gradient(135deg, #16a34a, #15803d);
+      padding: 30px 20px;
       text-align: center;
     }
 
-    .logo {
-      font-size: 30px;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: #22c55e;
-    }
-
-    header p {
-      margin-top: 8px;
-      color: #d1d5db;
-      font-size: 14px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 35px 20px 25px;
-    }
-
-    .hero h1 {
-      font-size: 28px;
+    header h1 {
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
-    .hero p {
-      color: #666;
-      font-size: 15px;
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .welcome h2 {
+      font-size: 25px;
+      margin-bottom: 8px;
     }
 
     .games {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
-      padding: 20px;
-      max-width: 700px;
-      margin: auto;
     }
 
     .game {
-      background: white;
+      background: #1e293b;
+      border: 1px solid #334155;
       border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      padding: 22px;
       text-align: center;
-      transition: 0.2s;
+      transition: 0.3s;
     }
 
     .game:hover {
-      transform: translateY(-3px);
+      transform: translateY(-5px);
+      border-color: #22c55e;
     }
 
-    .icon {
+    .game .icon {
       font-size: 55px;
-      margin-bottom: 12px;
-    }
-
-    .game h2 {
-      margin-bottom: 8px;
-      font-size: 22px;
-    }
-
-    .game p {
-      color: #777;
-      margin-bottom: 18px;
-      font-size: 14px;
-    }
-
-    button {
-      width: 100%;
-      border: none;
-      border-radius: 12px;
-      padding: 14px;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
-      background: #16a34a;
-      cursor: pointer;
-    }
-
-    button:active {
-      transform: scale(0.98);
-    }
-
-    .info {
-      background: white;
-      margin: 10px 20px 30px;
-      padding: 20px;
-      border-radius: 16px;
-      text-align: center;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .info h3 {
       margin-bottom: 10px;
     }
 
-    .info p {
-      color: #666;
-      font-size: 14px;
-      line-height: 1.8;
+    .game h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .game p {
+      color: #cbd5e1;
+      margin-bottom: 18px;
+    }
+
+    .price {
+      background: #0f172a;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 7px 0;
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    .order {
+      display: inline-block;
+      margin-top: 12px;
+      background: #22c55e;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .order:hover {
+      background: #16a34a;
+    }
+
+    .contact {
+      margin-top: 35px;
+      background: #1e293b;
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 10px;
+    }
+
+    .phone {
+      font-size: 23px;
+      color: #22c55e;
+      margin: 15px 0;
+      direction: ltr;
     }
 
     footer {
-      background: #111827;
-      color: #aaa;
       text-align: center;
-      padding: 20px;
-      font-size: 13px;
-    }
-
-    @media (min-width: 600px) {
-      .games {
-        grid-template-columns: repeat(3, 1fr);
-      }
+      padding: 25px;
+      color: #94a3b8;
     }
   </style>
 </head>
@@ -150,63 +140,102 @@
 <body>
 
   <header>
-    <div class="logo">DZAIR <span>GAMES</span></div>
-    <p>منصتك لشحن الألعاب بسرعة وسهولة 🎮</p>
+    <h1>🎮 DZAIR GAMES</h1>
+    <p>شحن رصيد الألعاب بسرعة وأمان 🇩🇿</p>
   </header>
 
-  <section class="hero">
-    <h1>اختر لعبتك</h1>
-    <p>اختر اللعبة التي تريد شحنها وابدأ الآن</p>
-  </section>
+  <div class="container">
 
-  <section class="games">
-
-    <div class="game">
-      <div class="icon">🔥</div>
-      <h2>Free Fire</h2>
-      <p>شحن جواهر Free Fire</p>
-      <button onclick="chooseGame('Free Fire')">
-        شحن الآن
-      </button>
+    <div class="welcome">
+      <h2>اختر لعبتك 🎮</h2>
+      <p>اطلب شحن رصيدك وسنتواصل معك لإتمام الطلب</p>
     </div>
 
-    <div class="game">
-      <div class="icon">🎯</div>
-      <h2>PUBG Mobile</h2>
-      <p>شحن UC PUBG Mobile</p>
-      <button onclick="chooseGame('PUBG Mobile')">
-        شحن الآن
-      </button>
+    <div class="games">
+
+      <div class="game">
+        <div class="icon">🔥</div>
+        <h3>Free Fire</h3>
+        <p>شحن الماسات</p>
+
+        <div class="price">100 💎 — السعر عند الطلب</div>
+        <div class="price">310 💎 — السعر عند الطلب</div>
+        <div class="price">520 💎 — السعر عند الطلب</div>
+
+        <a class="order"
+           href="https://wa.me/213551287114?text=السلام%20عليكم%20أريد%20شحن%20Free%20Fire">
+          اطلب الآن
+        </a>
+      </div>
+
+
+      <div class="game">
+        <div class="icon">🔫</div>
+        <h3>PUBG Mobile</h3>
+        <p>شحن UC</p>
+
+        <div class="price">60 UC — السعر عند الطلب</div>
+        <div class="price">325 UC — السعر عند الطلب</div>
+        <div class="price">660 UC — السعر عند الطلب</div>
+
+        <a class="order"
+           href="https://wa.me/213551287114?text=السلام%20عليكم%20أريد%20شحن%20PUBG%20Mobile">
+          اطلب الآن
+        </a>
+      </div>
+
+
+      <div class="game">
+        <div class="icon">⚽</div>
+        <h3>eFootball</h3>
+        <p>شحن العملات</p>
+
+        <div class="price">100 Coins — السعر عند الطلب</div>
+        <div class="price">550 Coins — السعر عند الطلب</div>
+        <div class="price">1050 Coins — السعر عند الطلب</div>
+
+        <a class="order"
+           href="https://wa.me/213551287114?text=السلام%20عليكم%20أريد%20شحن%20eFootball">
+          اطلب الآن
+        </a>
+      </div>
+
+
+      <div class="game">
+        <div class="icon">⚽</div>
+        <h3>FC Mobile</h3>
+        <p>شحن FC Points</p>
+
+        <div class="price">105 Points — السعر عند الطلب</div>
+        <div class="price">520 Points — السعر عند الطلب</div>
+        <div class="price">1070 Points — السعر عند الطلب</div>
+
+        <a class="order"
+           href="https://wa.me/213551287114?text=السلام%20عليكم%20أريد%20شحن%20FC%20Mobile">
+          اطلب الآن
+        </a>
+      </div>
+
     </div>
 
-    <div class="game">
-      <div class="icon">⚽</div>
-      <h2>FC Mobile</h2>
-      <p>شحن FC Mobile</p>
-      <button onclick="chooseGame('FC Mobile')">
-        شحن الآن
-      </button>
+
+    <div class="contact">
+      <h2>📱 للتواصل والطلب</h2>
+      <p>اضغط على زر الطلب أو تواصل معنا مباشرة</p>
+
+      <div class="phone">0551287114</div>
+
+      <a class="order"
+         href="https://wa.me/213551287114">
+        💬 تواصل معنا عبر واتساب
+      </a>
     </div>
 
-  </section>
-
-  <div class="info">
-    <h3>💳 دفع آمن وسريع</h3>
-    <p>
-      اختر اللعبة والباقة المناسبة لك.
-      سيتم تطوير نظام الدفع والشحن الآلي في الخطوات القادمة.
-    </p>
   </div>
 
   <footer>
-    © 2026 DZAIR GAMES - جميع الحقوق محفوظة
+    © 2026 DZAIR GAMES — جميع الحقوق محفوظة
   </footer>
-
-  <script>
-    function chooseGame(game) {
-      alert("لقد اخترت: " + game + "\nسيتم تجهيز صفحة الشحن قريبًا.");
-    }
-  </script>
 
 </body>
 </html>
