@@ -120,14 +120,25 @@ function orderGame(game, pack, price) {
             margin-bottom: 15px;
         }
 
-        .price {
-            background: #0f172a;
-            color: #22c55e;
-            padding: 14px;
-            margin: 10px 0;
-            border-radius: 12px;
-            font-size: 17px;
-            font-weight: bold;
+            .price {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background: #0f172a;
+    color: #22c55e;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.price:hover {
+    background: #172554;
+}
         }
 
         .order {
