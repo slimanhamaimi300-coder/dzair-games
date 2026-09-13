@@ -13,36 +13,7 @@
             padding: 0;
         
 
-    
 
-    if (playerId === null) {
-        return false;
-    }
-
-    playerId = playerId.trim();
-
-    if (playerId === "") {
-        alert("⚠️ يرجى إدخال ID اللاعب");
-        return false;
-    }
-
-    let message =
-        "السلام عليكم 👋\n" +
-        "🎮 اللعبة: " + game + "\n" +
-        "📦 الباقة: " + pack + "\n" +
-        "💰 السعر: " + price + " دج\n" +
-        "🆔 ID اللاعب: " + playerId + "\n\n" +
-        "أريد تأكيد طلبي ✅";
-
-    let whatsappURL =
-        "https://wa.me/213551287114?text=" +
-        encodeURIComponent(message);
-
-    window.location.href = whatsappURL;
-
-    return false;
-}
-</script>
 
         body {
             font-family: Arial, sans-serif;
@@ -164,8 +135,44 @@
             padding: 30px;
             color: #94a3b8;
         }
-    </style>
-</head>
+</style>
+
+<script>
+function orderGame(game, pack, price) {
+
+    let playerId = prompt("🎮 أدخل ID اللاعب:");
+
+    if (playerId === null) {
+        return false;
+    }
+
+    playerId = playerId.trim();
+
+    if (playerId === "") {
+        alert("⚠️ يرجى إدخال ID اللاعب");
+        return false;
+    }
+
+    let message =
+        "السلام عليكم 👋\n" +
+        "🎮 اللعبة: " + game + "\n" +
+        "📦 الباقة: " + pack + "\n" +
+        "💰 السعر: " + price + " دج\n" +
+        "🆔 ID اللاعب: " + playerId + "\n\n" +
+        "أريد تأكيد طلبي ✅";
+
+    let whatsappURL =
+        "https://wa.me/213551287114?text=" +
+        encodeURIComponent(message);
+
+    window.location.href = whatsappURL;
+
+    return false;
+}
+</script>
+
+</head>    
+
 
 <body>
 
