@@ -12,7 +12,36 @@
             margin: 0;
             padding: 0;
         }
+<script>
+function orderGame(game, pack, price) {
 
+    let playerId = prompt("🎮 أدخل ID اللاعب الخاص بك:");
+
+    if (playerId === null) {
+        return;
+    }
+
+    playerId = playerId.trim();
+
+    if (playerId === "") {
+        alert("⚠️ يرجى إدخال ID اللاعب");
+        return;
+    }
+
+    const message =
+        "السلام عليكم 👋%0A" +
+        "🎮 اللعبة: " + game + "%0A" +
+        "📦 الباقة: " + pack + "%0A" +
+        "💰 السعر: " + price + " دج%0A" +
+        "🆔 ID اللاعب: " + playerId + "%0A%0A" +
+        "أريد تأكيد طلبي ✅";
+
+    window.open(
+        "https://wa.me/213551287114?text=" + message,
+        "_blank"
+    );
+}
+</script>
         body {
             font-family: Arial, sans-serif;
             background: #0f172a;
