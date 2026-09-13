@@ -15,31 +15,34 @@
 <script>
 function orderGame(game, pack, price) {
 
-    let playerId = prompt("🎮 أدخل ID اللاعب الخاص بك:");
+    let playerId = prompt("🎮 أدخل ID اللاعب:");
 
     if (playerId === null) {
-        return;
+        return false;
     }
 
     playerId = playerId.trim();
 
     if (playerId === "") {
         alert("⚠️ يرجى إدخال ID اللاعب");
-        return;
+        return false;
     }
 
-    const message =
-        "السلام عليكم 👋%0A" +
-        "🎮 اللعبة: " + game + "%0A" +
-        "📦 الباقة: " + pack + "%0A" +
-        "💰 السعر: " + price + " دج%0A" +
-        "🆔 ID اللاعب: " + playerId + "%0A%0A" +
+    let message =
+        "السلام عليكم 👋\n" +
+        "🎮 اللعبة: " + game + "\n" +
+        "📦 الباقة: " + pack + "\n" +
+        "💰 السعر: " + price + " دج\n" +
+        "🆔 ID اللاعب: " + playerId + "\n\n" +
         "أريد تأكيد طلبي ✅";
 
-    window.open(
-        "https://wa.me/213551287114?text=" + message,
-        "_blank"
-    );
+    let whatsappURL =
+        "https://wa.me/213551287114?text=" +
+        encodeURIComponent(message);
+
+    window.location.href = whatsappURL;
+
+    return false;
 }
 </script>
         body {
